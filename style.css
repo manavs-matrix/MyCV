@@ -1,0 +1,131 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-image: radial-gradient(circle, darkblue, rgb(0,2,7));
+    color: white;
+    font-family: sans-serif;
+    overflow-x: hidden;
+}
+
+.mainprofile{
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    margin: 2% 10%; 
+}
+
+.pic img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 50%;
+}
+.pic{
+    animation: intro 2s ease-out 0.5s;
+}
+
+.details {
+    flex: 1;
+}
+
+#name {
+    font-weight: bold;
+    font-size: clamp(2.5rem, 6vw, 5rem); 
+    line-height: 1.1;
+    transition: 0.3s;
+}
+
+#name:hover{
+    text-shadow: 0px 0px 15px white;
+}
+
+#proffesion{
+    font-size: 1.5rem;
+    margin: 10px 0;
+    opacity: 0.8;
+}
+
+.contactinfo {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    padding: 15px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.3);
+}
+
+.contactinfo p {
+    white-space: nowrap; 
+}
+
+.aboutme, .education, .experience, .skills, .refrences {
+    margin: 3rem 10%;
+}
+.aboutme p{
+    margin-top: 1rem;
+}
+
+hr {
+    opacity: 0.3;
+}
+
+.e1 {
+    display: flex;
+    margin-top: 1.5rem;
+    gap: 20px;
+}
+
+.e1 .time {
+    min-width: 150px;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    margin-top: 1.5rem;
+    margin-left: 1rem;
+}
+
+.container2 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    margin-top: 1.5rem;
+}
+
+@media (max-width: 768px) {
+    .mainprofile {
+        flex-direction: column;
+        text-align: center;
+        margin: 5% 5%;
+    }
+
+    .contactinfo {
+        justify-content: center;
+    }
+
+    .e1 {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .aboutme, .education, .experience, .skills, .refrences {
+        margin: 2rem 5%;
+    }
+
+    .pic img {
+        width: 150px;
+    }
+}
+
+@keyframes intro{
+    from{
+        transform: translate(-400px);
+    }
+    to{
+        transform: translate(0px);
+    }
+}
